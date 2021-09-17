@@ -19,6 +19,10 @@ jobs:
           plugin_activity_limit: 5    # Limit to 5 events
           plugin_activity_days: 14    # Keep only events from last 14 days (can be set to 0 to disable limitations)
           plugin_activity_filter: all    # Display repositories name instead of only organization name
+          plugin_languages_details: bytes-size, percentage              # Additionally display total bytes size and percentage
+          plugin_languages_threshold: 2%                                # Hides all languages less than 2%
+          plugin_languages_limit: 8                                     # Display up to 8 languages
+          plugin_languages_sections: most-used, recently-used           
           token: ${{ secrets.METRICS_TOKEN }}
           # GITHUB_TOKEN is a special auto-generated token restricted to current repository, which is used to push files in it
           committer_token: ${{ secrets.GITHUB_TOKEN }}
