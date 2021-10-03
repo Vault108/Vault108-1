@@ -1539,7 +1539,7 @@
         Recently used languages
       </h3>
                 <small>
-            estimation from 22 edited files from 30 commits over last 14 days
+            estimation from 17 edited files from 25 commits over last 13 days
           </small>
                 <svg class="bar" xmlns="http://www.w3.org/2000/svg" width="460" height="8">
                     <mask id="languages-bar">
@@ -1556,7 +1556,7 @@
                       Python
                     </div>
                             <small>
-                                <div>1.30 kB</div>
+                                <div>1.04 kB</div>
                                 <div>100%</div>
                             </small>
                         </div>
@@ -1657,7 +1657,7 @@ Create LICENSE</span>
             </section>
             <footer>
                 <span>These metrics include private contributions</span>
-                <span>Last updated 03/10/2021, 01:00  with lowlighter/metrics@3.14.0</span>
+                <span>Last updated 03/10/2021, 02:06  with lowlighter/metrics@3.14.0</span>
             </footer>
         </div>
         <div xmlns="http://www.w3.org/1999/xhtml" id="metrics-end"></div>
