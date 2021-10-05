@@ -1,36 +1,26 @@
 name: Metrics
 on:
-  # Schedule updates
   schedule: [{cron: "0 * * * *"}]
-  # Lines below let you run workflow manually and on each commit
   push: {branches: ["master", "main"]}
   workflow_dispatch:
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
     steps:
-      # See action.yml for all options
       - uses: lowlighter/metrics@latest
         with:
-          plugin_lines: yes  
-          plugin_languages: yes 
-          plugin_languages_skipped: "Night-Audit-Stats"
-          plugin_activity: yes
-          plugin_activity_limit: 5    # Limit to 5 events
-          plugin_activity_days: 14    # Keep only events from last 14 days (can be set to 0 to disable limitations)
-          plugin_activity_filter: all    # Display repositories name instead of only organization name
-          plugin_languages_details: bytes-size, percentage              # Additionally display total bytes size and percentage
-          plugin_languages_threshold: 2%                                # Hides all languages less than 2%
-          plugin_languages_limit: 8                                     # Display up to 8 languages
-          plugin_languages_sections: most-used, recently-used           
-          token: ${{ secrets.METRICS_TOKEN }}
           plugin_wakatime: yes
-          plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}      # Required
+          plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}      
           plugin_wakatime_days: 30                                   
           plugin_wakatime_sections: time, projects, projects-graphs, languages, languages-graphs, editors, os         
-          plugin_wakatime_limit: 4                                  # Show 4 entries per graph
-          plugin_wakatime_url: https://wakatime.com                 # Wakatime url endpoint
-          plugin_wakatime_user: Vault108                         # User
-          # GITHUB_TOKEN is a special auto-generated token restricted to current repository, which is used to push files in it
+          plugin_wakatime_limit: 4                                  
+          plugin_wakatime_url: https://wakatime.com                 
+          plugin_wakatime_user: Vault108                         
+          plugin_lines: yes  
+          plugin_activity: yes
+          plugin_activity_limit: 5   
+          plugin_activity_days: 14    
+          plugin_activity_filter: all    
+          token: ${{ secrets.METRICS_TOKEN }}
           committer_token: ${{ secrets.GITHUB_TOKEN }}
  
