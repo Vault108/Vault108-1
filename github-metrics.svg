@@ -1646,16 +1646,21 @@
             </div>
                         <div class="field">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M10.5 7.75a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm1.43.75a4.002 4.002 0 01-7.86 0H.75a.75.75 0 110-1.5h3.32a4.001 4.001 0 017.86 0h3.32a.75.75 0 110 1.5h-3.32z"/></svg>
-              Merge pull request #346 from TotallyNotRobots/dependabot/pip/pytest-asyncio-0.15.0
+              build(deps): bump codecov/codecov-action from v1.3.2 to v1.4.0
 
-build(deps-dev): bump pytest-asyncio from 0.14.0 to 0.15.0
+Bumps [codecov/codecov-action](https://github.com/codecov/codecov-action) from v1.3.2 to v1.4.0.
+- [Release notes](https://github.com/codecov/codecov-action/releases)
+- [Changelog](https://github.com/codecov/codecov-action/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/codecov/codecov-action/compare/v1.3.2...0e28ff86a50029a44d10df6ed4c308711925a6a8)
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt;
             </div>
                         <div class="field">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
                                 <path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"/>
                             </svg>
-                            <span class="code">650abd6f</span>
-                            <span class="code">requirements-dev.txt</span>
+                            <span class="code">f2d4c33f</span>
+                            <span class="code">.github/workflows/pythonapp.yml</span>
                             <span class="code">
                                 <span class="snippet additions">++1</span>
                                 <span class="snippet deletions">--1</span>
@@ -1666,16 +1671,16 @@ build(deps-dev): bump pytest-asyncio from 0.14.0 to 0.15.0
                 <div class="row">
                     <section class="snippet">
                         <div class="body markdown">
-                            <code class="language-diff" xml:space="preserve"><span class="token coord">@@ -3,7 +3,7 @@</span>
-freezegun == 1.1.0
-mypy == 0.812
-pylint == 2.7.4
-pytest == 6.2.3
-<span class="token deleted-sign deleted"><span class="token prefix deleted">-</span><span class="token line">pytest-asyncio == 0.14.0
-</span></span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span><span class="token line">pytest-asyncio == 0.15.0
-</span></span>pytest-cov == 2.11.1
-pytest-random-order == 1.0.4
-responses == 0.13.2</code>
+                            <code class="language-diff" xml:space="preserve"><span class="token coord">@@ -43,7 +43,7 @@</span>
+jobs:
+<span class="token unchanged"><span class="token prefix unchanged"> </span><span class="token line">     env:
+</span><span class="token prefix unchanged"> </span><span class="token line">       PYTHONDEVMODE: 1
+</span><span class="token prefix unchanged"> </span><span class="token line">       PYTHONPATH: .
+</span></span><span class="token deleted-sign deleted"><span class="token prefix deleted">-</span><span class="token line">   - uses: codecov/codecov-action@v1.3.2
+</span></span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span><span class="token line">   - uses: codecov/codecov-action@v1.4.0
+</span></span><span class="token unchanged"><span class="token prefix unchanged"> </span><span class="token line">     with:
+</span><span class="token prefix unchanged"> </span><span class="token line">       name: build-${{ matrix.python-ver }}
+</span><span class="token prefix unchanged"> </span><span class="token line">       fail_ci_if_error: true</span></span></code>
                         </div>
                     </section>
                 </div>
