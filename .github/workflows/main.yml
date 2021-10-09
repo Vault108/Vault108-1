@@ -10,6 +10,10 @@ jobs:
   github-metrics:
     runs-on: ubuntu-latest
     steps:
+      - uses: dailydotdev/action-devcard@2.0.4
+        with:
+         devcard_id: ${{ secrets.DEVCARD_ID }}
+   
       - uses: lowlighter/metrics@latest
         with:
           # Your GitHub token
@@ -35,4 +39,5 @@ jobs:
           plugin_wakatime_sections: time, projects, projects-graphs, languages, languages-graphs, editors, os         
           plugin_wakatime_limit: 4                                  
           plugin_wakatime_url: https://wakatime.com                 
-          plugin_wakatime_user: Vault108                
+          plugin_wakatime_user: Vault108
+         
