@@ -1,1 +1,1 @@
-![Metrics](https://github.com/Vault108/Vault108/blob/main/github-metrics.svg)
+<img src="/github-metrics.svg" alt="Metrics" width="100%">
