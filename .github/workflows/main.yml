@@ -31,7 +31,7 @@ jobs:
           base_indepth: yes
           config_display: large
           config_octicon: yes
-          config_presets: @ocean-blue
+          config_presets: ocean-blue
           config_timezone: America/New_York
           config_twemoji: yes
           plugin_achievements: yes
