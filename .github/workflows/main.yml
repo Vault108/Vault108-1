@@ -14,14 +14,6 @@ jobs:
     steps:
       - uses: lowlighter/metrics@latest
         with:
-          # Your GitHub token
-          # The following scopes are required:
-          #  - public_access (default scope)
-          # The following additional scopes may be required:
-          #  - read:org      (for organization related metrics)
-          #  - read:user     (for user related data)
-          #  - read:packages (for some packages related data)
-          #  - repo          (optional, if you want to include private repositories)
           token: ${{ secrets.METRICS_TOKEN }}
 
           # Options
@@ -40,7 +32,7 @@ jobs:
           plugin_achievements_threshold: C
           plugin_habits: yes
           plugin_habits_charts_type: classic
-          plugin_habits_days: 14
+          plugin_habits_days: 30
           plugin_habits_facts: yes
           plugin_habits_from: 500
           plugin_habits_languages_limit: 15
@@ -53,7 +45,7 @@ jobs:
           plugin_languages_ignored: html
           plugin_languages_limit: 30
           plugin_languages_recent_categories: markup, programming
-          plugin_languages_recent_days: 14
+          plugin_languages_recent_days: 30
           plugin_languages_recent_load: 300
           plugin_languages_sections: most-used
           plugin_languages_threshold: 0%
@@ -61,15 +53,4 @@ jobs:
           plugin_lines_history_limit: 34
           plugin_lines_repositories_limit: 4
           plugin_lines_sections: repositories 
-          plugin_lines_skipped: HASHCAT-DEMO
-          plugin_notable: yes
-          plugin_notable_from: all
-          plugin_notable_types: commit
-          plugin_wakatime: yes
-          plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}      
-          plugin_wakatime_days: 30                                   
-          plugin_wakatime_sections: time, projects, projects-graphs, languages, languages-graphs, editors, os         
-          plugin_wakatime_limit: 4                                  
-          plugin_wakatime_url: https://wakatime.com                 
-          plugin_wakatime_user: Vault108
-         
+          plugin_lines_skipped: HASHCAT-DEMO      
