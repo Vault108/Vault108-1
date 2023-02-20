@@ -1,1 +1,1 @@
-![Metrics](https://raw.githubusercontent.com/Vault108/Vault108/main/github-metrics.svg)
+![Metrics](https://github.com/Vault108/Vault108/blob/main/github-metrics.svg)
