@@ -1,21 +1,20 @@
-# Visit https://github.com/lowlighter/metrics#-documentation for full reference
-name: Achievements
+# Read the full reference here: https://github.com/lowlighter/metrics/blob/master/action.yml
+name: Achievements 
 on:
-  # Schedule updates (each hour)
-  schedule: [{cron: "0 * * * *"}]
-  # Lines below let you run workflow manually and on each commit
+  # Schedule updates (At minute 0 past every 12th hour)
+  schedule: [{ cron: "0 */12 * * *" }]
+  # Lines below let you run workflow manually with each commit
   workflow_dispatch:
-  push: {branches: ["23", "main"]}
+  push: { branches: ["master", "main", "metrics"] }
 jobs:
-  achievements-metrics:
+  # https://github.com/lowlighter/metrics/blob/master/source/plugins/achievements/README.md
+  achievement-metrics:      
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
-      - uses: lowlighter/metrics@master
+      - uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
-          filename: images/metrics_plugin_achievements.svg
+          filename: assets/metrics-plugin-achievements.svg
           plugin_achievements: yes
           plugin_achievements_display: detailed
           plugin_achievements_ignored: 
