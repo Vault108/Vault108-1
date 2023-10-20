@@ -32,6 +32,6 @@ jobs:
           config_timezone: America/New_York
           plugin_notable: yes
           plugin_notable_from: organization
-          plugin_notable_indepth: yes
+          plugin_notable_indepth: no
           plugin_notable_repositories: yes
           plugin_notable_types: commit
