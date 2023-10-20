@@ -28,7 +28,7 @@ jobs:
           user: Vault108
           template: classic
           base: header, activity, metadata
-          base_indepth: yes
+          base_skip: yes
           config_display: large
           config_octicon: yes
           config_presets: ocean-blue
