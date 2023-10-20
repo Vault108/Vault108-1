@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
   push: {branches: ["23", "main"]}
 jobs:
-  github-metrics:
+  achievements-metrics:
     runs-on: ubuntu-latest
     permissions:
       contents: write
